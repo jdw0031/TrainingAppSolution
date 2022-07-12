@@ -1,25 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
-using TrainingApp.Data;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using TrainingApp.Models;
-using TrainingApp.Models.TrainingSessionModel;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using TrainingApp.Data;
+using TrainingApp.DataAccess.Repository;
+using TrainingApp.DataAccess.Repository.IRepository;
+using TrainingApp.Models;
 using TrainingApp.Services;
-using TrainingApp.Models.TrainerModel;
-using TrainingApp.Models.ApplicationUserModel;
-using TrainingApp.Models.TrainerScheuleModel;
-
 
 namespace TrainingApp
 {
@@ -38,20 +26,7 @@ namespace TrainingApp
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<ApplicationUser>
-                (
-                    options =>
-                    {
-                        options.Password.RequiredLength = 6;
-                        options.Password.RequireNonAlphanumeric = false;
-                        options.Password.RequireUppercase = true;
-                        options.Password.RequireLowercase = true;
-                        options.Password.RequireDigit = true;
-                        options.User.RequireUniqueEmail = true;
-                        options.SignIn.RequireConfirmedEmail = true;
-                    }
-                )
-                .AddRoles<IdentityRole>()
+            services.AddDefaultIdentity<ApplicationUser>()
 
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
@@ -97,4 +72,3 @@ namespace TrainingApp
         }
     }
 }
-

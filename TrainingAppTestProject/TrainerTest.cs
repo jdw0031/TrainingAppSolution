@@ -2,15 +2,13 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Moq;
-using TrainingApp.Controllers;
-using TrainingApp.Models.ApplicationUserModel;
-using TrainingApp.Models.TrainerModel;
-using TrainingApp.Models.TrainerScheuleModel;
-using TrainingApp.Models.TrainingSessionModel;
 using Xunit;
 using TrainingApp.ViewModel;
 using System;
 using Microsoft.AspNetCore.Mvc;
+using TrainingApp.DataAccess.Repository.IRepository;
+using TrainingApp.Models;
+using TrainingApp.Areas.Trainers.Controllers;
 
 namespace TrainingAppTestProject
 {

@@ -1,13 +1,13 @@
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using TrainingApp.Data;
+using TrainingApp.Models;
+using TrainingApp.DataAccess.Repository.IRepository;
+using TrainingApp.DataAccess.Repository;
+using TrainingApp.Services;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using TrainingApp;
 using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace TrainingApp
 {

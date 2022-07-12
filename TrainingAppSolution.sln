@@ -3,9 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingApp", "TrainingApp\TrainingApp.csproj", "{E034D423-6A74-4D91-97E8-8D9ECB35704C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingApp", "TrainingApp\TrainingApp.csproj", "{E034D423-6A74-4D91-97E8-8D9ECB35704C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EB7DB854-92E6-4C1C-B635-C73B4F2EDF79} = {EB7DB854-92E6-4C1C-B635-C73B4F2EDF79}
+		{F1A015AB-1F6D-4F0F-96AA-B23403868CEC} = {F1A015AB-1F6D-4F0F-96AA-B23403868CEC}
+		{FB000C86-E43E-4BDC-90C2-528D3860FCEE} = {FB000C86-E43E-4BDC-90C2-528D3860FCEE}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingAppTestProject", "TrainingAppTestProject\TrainingAppTestProject.csproj", "{76736283-FBCB-4BDE-BA24-2D7D6F6433BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingAppTestProject", "TrainingAppTestProject\TrainingAppTestProject.csproj", "{76736283-FBCB-4BDE-BA24-2D7D6F6433BE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EB7DB854-92E6-4C1C-B635-C73B4F2EDF79} = {EB7DB854-92E6-4C1C-B635-C73B4F2EDF79}
+		{F1A015AB-1F6D-4F0F-96AA-B23403868CEC} = {F1A015AB-1F6D-4F0F-96AA-B23403868CEC}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingApp.DataAccess", "TrainingApp.DataAccess\TrainingApp.DataAccess.csproj", "{EB7DB854-92E6-4C1C-B635-C73B4F2EDF79}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FB000C86-E43E-4BDC-90C2-528D3860FCEE} = {FB000C86-E43E-4BDC-90C2-528D3860FCEE}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingApp.Utility", "TrainingApp.Utility\TrainingApp.Utility.csproj", "{F1A015AB-1F6D-4F0F-96AA-B23403868CEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingApp.Models", "TrainingApp.Models\TrainingApp.Models.csproj", "{FB000C86-E43E-4BDC-90C2-528D3860FCEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +39,18 @@ Global
 		{76736283-FBCB-4BDE-BA24-2D7D6F6433BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76736283-FBCB-4BDE-BA24-2D7D6F6433BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76736283-FBCB-4BDE-BA24-2D7D6F6433BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB7DB854-92E6-4C1C-B635-C73B4F2EDF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB7DB854-92E6-4C1C-B635-C73B4F2EDF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB7DB854-92E6-4C1C-B635-C73B4F2EDF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB7DB854-92E6-4C1C-B635-C73B4F2EDF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1A015AB-1F6D-4F0F-96AA-B23403868CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A015AB-1F6D-4F0F-96AA-B23403868CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A015AB-1F6D-4F0F-96AA-B23403868CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A015AB-1F6D-4F0F-96AA-B23403868CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB000C86-E43E-4BDC-90C2-528D3860FCEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB000C86-E43E-4BDC-90C2-528D3860FCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB000C86-E43E-4BDC-90C2-528D3860FCEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB000C86-E43E-4BDC-90C2-528D3860FCEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
